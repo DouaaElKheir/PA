@@ -116,6 +116,8 @@ aws ec2 describe-subnets --query "Subnets[].{Id:SubnetId,AZ:AvailabilityZone,CID
 - Un **VPC** avec au moins 2 sous-réseaux publics (le VPC par défaut suffit pour démarrer).
 - `jq` (optionnel, pratique pour parser la sortie AWS CLI).
 
+> **Région utilisée pour ce déploiement : `us-east-1`, pas `eu-west-1`.** Le reste de ce guide garde `eu-west-1` comme exemple générique dans les commandes, mais le déploiement réel a été fait en `us-east-1` — alignée sur la région déjà configurée dans le compte AWS utilisé et sur les inference profiles Bedrock choisis (`us.anthropic.claude-sonnet-4-6`, `us.amazon.nova-pro-v1:0`, préfixés `us.`). Remplacez simplement `AWS_REGION` ci-dessous par `us-east-1` si vous reproduisez ce déploiement à l'identique.
+
 Variables d'environnement utilisées dans ce guide :
 
 ```bash
@@ -507,7 +509,16 @@ Les profils pertinents pour Kōjin (texte → SQL) :
 | `amazon.nova-pro-v1:0` | Nova Pro | ⭐⭐⭐ | ~$0.8 / $3.2 per MTok |
 | `amazon.nova-micro-v1:0` | Nova Micro | ⭐⭐ | ~$0.035 / $0.14 per MTok |
 
-Le modèle par défaut dans le code (`BEDROCK_MODEL_ID` dans `kojin_common.py`, si la variable d'environnement n'est pas définie) est **`us.amazon.nova-pro-v1:0`**. La task definition de ce guide (§7.2) fixe explicitement `BEDROCK_MODEL_ID` sur **`us.anthropic.claude-sonnet-4-6`** pour une meilleure qualité SQL (voir tableau ci-dessus) — c'est ce choix explicite qui prévaut en production, pas le défaut du code. Pour changer de modèle sans reconstruire l'image, modifiez `BEDROCK_MODEL_ID` dans la task definition.
+Le modèle par défaut dans le code (`BEDROCK_MODEL_ID` dans `kojin_common.py`, si la variable d'environnement n'est pas définie) est `us.amazon.nova-pro-v1:0`. Pour changer de modèle sans reconstruire l'image, modifiez `BEDROCK_MODEL_ID` dans la task definition.
+
+> **⚠️ Retour d'expérience réel — modèles Anthropic sur Bedrock** : `us.anthropic.claude-sonnet-4-6` a été testé en premier lieu pour sa meilleure qualité de génération SQL, et fonctionnait via `aws bedrock-runtime invoke-model` en CLI. Une fois déployé dans la tâche ECS, l'appel échouait pourtant avec :
+> ```
+> ResourceNotFoundException: Model use case details have not been submitted for this account.
+> Fill out the Anthropic use case details form before using the model.
+> ```
+> C'est une exigence de conformité **propre aux modèles tiers (Anthropic)** sur Bedrock — indépendante des permissions IAM (qui étaient correctes) : AWS/Anthropic exige de remplir un formulaire décrivant l'usage prévu avant d'autoriser les appels depuis un compte donné, avec un délai de propagation (~15 min à quelques heures) après soumission. Ce n'est pas garanti de fonctionner même après avoir rempli le formulaire dans l'immédiat.
+>
+> **Solution retenue pour ce déploiement** : basculer sur **`us.amazon.nova-pro-v1:0`** (modèle propriétaire Amazon, pas soumis à cette exigence tierce) — opérationnel immédiatement après un simple `register-task-definition` + `update-service --force-new-deployment`, sans attente. C'est la valeur utilisée dans la task definition ci-dessous. Si vous avez le temps de soumettre le formulaire Anthropic en amont d'un déploiement, `claude-sonnet-4-6` reste une alternative de meilleure qualité SQL.
 
 **Tester l'accès au modèle avant déploiement :**
 
@@ -902,7 +913,7 @@ cat > task-def.json << EOF
         { "name": "AWS_REGION",               "value": "${AWS_REGION}" },
         { "name": "DATA_S3_URI",              "value": "s3://${DATA_BUCKET}/${DATA_KEY}" },
         { "name": "LLM_PROVIDER",             "value": "bedrock" },
-        { "name": "BEDROCK_MODEL_ID",         "value": "us.anthropic.claude-sonnet-4-6" },
+        { "name": "BEDROCK_MODEL_ID",         "value": "us.amazon.nova-pro-v1:0" },
         { "name": "BEDROCK_COMPARE_MODEL_ID", "value": "" },
         { "name": "KOJIN_EXPLORATION_LOG_JSONL", "value": "0" },
         { "name": "KOJIN_EXPLORATION_LOG_PATH",  "value": "/tmp/kojin_exploration_metrics.ndjson" }
