@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Rapport Projet Annuel Kojin</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="report_pdf_style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Rapport Projet Annuel Kojin</h1>
+</header>
+<p>ESGI — Mastère Expert IA &amp; Big Data 5IABD — Classe A Alternance
+RO</p>
+<h1 id="projet-annuel">PROJET ANNUEL</h1>
+<h1 id="kōjin">Kōjin</h1>
+<p><em>Composition automatisée de bentos nutritionnellement optimisés à
+partir de la base Open Food Facts</em></p>
+<p><strong>Rapport de projet</strong></p>
+<p><strong>Équipe projet</strong> MOREL Tom EL KHEIR Douaa ELKADOURI
+Hajar ZAIDI Yassine</p>
+<p>Année académique 2025 – 2026</p>
+<p><strong>Application déployée — accès public :</strong>
+<strong>http://kojin-alb-1461380392.us-east-1.elb.amazonaws.com</strong></p>
+<hr />
+<h2 id="sommaire">Sommaire</h2>
+<ol type="1">
+<li>Introduction et contexte</li>
+<li>Présentation du projet 2.1 Nom et descriptif 2.2 Pour qui, pour quoi
+faire 2.3 Matières IABD mobilisées</li>
+<li>Veille technologique et existant</li>
+<li>Spécifications fonctionnelles 4.1 Utilisateurs types 4.2 Description
+des cas d’usage 4.3 Maquette / interface</li>
+<li>Spécifications techniques et architecture 5.1 Vue d’ensemble de la
+stack 5.2 Calcul des objectifs nutritionnels 5.3 Algorithme de
+composition des bentos 5.4 Pipeline d’acquisition et de préparation des
+données 5.5 Recommandation par renforcement (RL Planner) et génération
+de contenu (LLM)</li>
+<li>Architecture globale</li>
+<li>Exigences transverses</li>
+<li>Déploiement 8.1 Réseau et sécurité (VPC, security groups) 8.2
+Conteneurisation et dimensionnement de la tâche ECS Fargate 8.3
+Exposition via l’Application Load Balancer et accès public 8.4 Stockage
+des données (S3 et EFS) 8.5 Identités et permissions (IAM) 8.6 Pipeline
+de mise en production 8.7 Supervision, alertes et FinOps 8.8 Estimation
+des coûts (FinOps) 8.9 Checklist de mise en production et nettoyage 8.10
+Variables d’environnement principales 8.11 Incidents de déploiement
+rencontrés et résolus</li>
+<li>Organisation du projet et travail en équipe</li>
+<li>Qualité d’usage, tests et validation</li>
+<li>Gestion des risques</li>
+<li>Bilan de réalisation</li>
+<li>Glossaire</li>
+<li>Annexes</li>
+<li>Conclusion</li>
+</ol>
+<hr />
+<h2 id="introduction-et-contexte">1. Introduction et contexte</h2>
+<p>Ce document constitue le rapport du projet annuel réalisé dans le
+cadre de la 5ème année du Mastère Expert IA &amp; Big Data de l’ESGI,
+filière 5IABD (classe A, alternance RO). Il présente le projet Kōjin,
+une application web qui compose automatiquement des bentos
+nutritionnellement optimisés à partir de la base de données ouverte Open
+Food Facts, en fonction du profil, de l’activité physique et des
+objectifs de l’utilisateur, et qui propose en complément une
+planification interactive par apprentissage par renforcement ainsi
+qu’une interface d’exploration du catalogue en langage naturel.</p>
+<p>Le projet a été mené en équipe de quatre étudiants, suivant le
+déroulé pédagogique en séances de suivi (proposition de projet,
+spécifications fonctionnelles et techniques, prototype, bilan avant
+soutenance) avant la soutenance finale. Ce rapport reprend cette
+progression : contexte et motivation, spécifications fonctionnelles et
+techniques, choix d’architecture, exigences transverses (automatisation,
+cloud, sécurité, FinOps), déploiement effectivement réalisé sur AWS,
+organisation du travail en équipe, puis bilan et perspectives.
+L’application est accessible publiquement à l’adresse
+<strong>http://kojin-alb-1461380392.us-east-1.elb.amazonaws.com</strong>.</p>
+<h2 id="présentation-du-projet">2. Présentation du projet</h2>
+<h3 id="nom-et-descriptif">2.1 Nom et descriptif</h3>
+<p>Kōjin est une application web qui calcule les besoins nutritionnels
+journaliers d’un utilisateur puis résout, sous contraintes, la
+composition de un à cinq bentos équilibrés en s’appuyant sur le
+catalogue de produits Open Food Facts, tout en respectant un régime
+alimentaire donné (vegan, végétarien, halal, casher, sans gluten, bio).
+L’application va au-delà de ce moteur d’optimisation initial et propose
+quatre espaces fonctionnels accessibles depuis une navigation unique :
+un profil utilisateur persistant, le planificateur de bentos par
+optimisation (Bento Planner), une page d’exploration du catalogue en
+langage naturel, et un planificateur de journée par politique
+d’apprentissage par renforcement (RL Planner).</p>
+<h3 id="pour-qui-pour-quoi-faire">2.2 Pour qui, pour quoi faire</h3>
+<p>Le projet s’adresse à toute personne souhaitant structurer son
+alimentation autour d’objectifs physiques précis (sèche musculaire,
+recomposition corporelle, prise de masse) sans avoir à calculer
+manuellement les portions de chaque aliment. Il vise en particulier les
+pratiquants de sport en salle, les personnes suivant un rééquilibrage
+alimentaire, et plus largement toute personne curieuse de voir ce qu’une
+approche data / optimisation peut apporter à un sujet aussi concret que
+la préparation de repas.</p>
+<p>Au-delà de la note, ce projet a été pensé comme une carte de visite
+technique : il combine des compétences directement mobilisables en
+entreprise — ingestion et nettoyage de données à grande échelle (Polars,
+Parquet), modélisation mathématique (optimisation sous contraintes),
+apprentissage par renforcement (NCF + PPO), intégration cloud (AWS
+Bedrock, S3, EFS, ECS Fargate) et restitution utilisateur (Streamlit) —
+ce qui correspond aux profils Data Engineer / Data Scientist visés par
+les membres de l’équipe à l’issue de leur alternance.</p>
+<h3 id="matières-iabd-mobilisées">2.3 Matières IABD mobilisées</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Matière IABD</th>
+<th>Mise en œuvre concrète dans le projet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Big Data &amp; traitement à l’échelle</td>
+<td>Ingestion et filtrage du dataset Open Food Facts (6,7 Go, format
+Parquet) avec Polars, traitement par groupes de lignes</td>
+</tr>
+<tr>
+<td>Intelligence artificielle / optimisation</td>
+<td>Modélisation du problème de composition de bento comme un système
+linéaire sous contraintes (NNLS puis BVLS)</td>
+</tr>
+<tr>
+<td>Intelligence artificielle / apprentissage par renforcement</td>
+<td>Politique PPO résiduelle entraînée sur un simulateur de préférences
+NCF (Neural Collaborative Filtering) construit sur les avis réels
+Food.com, pour la planification interactive d’une journée de repas</td>
+</tr>
+<tr>
+<td>IA générative / LLM</td>
+<td>Appel à un modèle de langage managé (Amazon Bedrock) pour la
+traduction de questions en langage naturel vers des requêtes SQL DuckDB
+(page Exploration)</td>
+</tr>
+<tr>
+<td>Cloud &amp; DevOps</td>
+<td>Déploiement conteneurisé sur AWS (ECS Fargate en architecture
+ARM64/Graviton, S3, EFS, Application Load Balancer), gestion des accès
+via rôle IAM plutôt que clé statique</td>
+</tr>
+<tr>
+<td>FinOps</td>
+<td>Choix raisonné du modèle Bedrock au regard du coût et de la
+disponibilité immédiate, budget AWS avec alertes automatiques,
+optimisation de la taille de l’image Docker</td>
+</tr>
+<tr>
+<td>Développement d’application</td>
+<td>Conception d’une interface Streamlit multipage et de la logique
+métier associée en Python</td>
+</tr>
+</tbody>
+</table>
+<h2 id="veille-technologique-et-existant">3. Veille technologique et
+existant</h2>
+<p>Le marché compte plusieurs catégories d’applications proches : les
+applications de suivi nutritionnel (type Yazio, MyFitnessPal) qui
+laissent l’utilisateur choisir et journaliser ses aliments a posteriori,
+les services de « meal prep » sur abonnement qui livrent des plats déjà
+composés sans marge de personnalisation fine, et des calculateurs de
+macros qui s’arrêtent au calcul des besoins sans proposer de composition
+concrète d’assiette.</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Solution</th>
+<th>Logique</th>
+<th>Catalogue produits</th>
+<th>Composition automatique</th>
+<th>Coût</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yazio / MyFitnessPal</td>
+<td>Journalisation a posteriori</td>
+<td>Fermé, contributions utilisateurs</td>
+<td>Non — l’utilisateur choisit puis vérifie</td>
+<td>Freemium</td>
+</tr>
+<tr>
+<td>Meal prep sur abonnement</td>
+<td>Menus imposés par le prestataire</td>
+<td>Fermé, recettes propriétaires</td>
+<td>Oui, mais non personnalisable finement</td>
+<td>Abonnement payant</td>
+</tr>
+<tr>
+<td>Calculateurs de macros seuls</td>
+<td>Calcul des besoins uniquement</td>
+<td>Aucun</td>
+<td>Non</td>
+<td>Gratuit</td>
+</tr>
+<tr>
+<td>Kōjin</td>
+<td>Part des objectifs, résout la composition</td>
+<td>Ouvert (Open Food Facts, licence ODbL)</td>
+<td>Oui, par optimisation sous contraintes ou par politique RL</td>
+<td>Gratuit / coût cloud marginal</td>
+</tr>
+</tbody>
+</table>
+<p>La différence de Kōjin tient donc à l’inversion de la logique
+habituelle : plutôt que de laisser l’utilisateur composer son repas puis
+vérifier s’il correspond à ses objectifs, l’application part des
+objectifs et résout un problème d’optimisation (ou interroge une
+politique apprise) pour proposer directement une composition chiffrée en
+grammes, à partir d’un catalogue ouvert.</p>
+<p>Cette veille a permis d’identifier les limites à anticiper : la
+qualité hétérogène du renseignement nutritionnel sur Open Food Facts, ce
+qui a motivé le filtrage sur les produits commercialisés en France et
+non obsolètes ainsi que l’exclusion des produits ultra-transformés (NOVA
+4). Une veille complémentaire sur les solveurs d’optimisation a confirmé
+le choix d’une approche NNLS puis BVLS plutôt qu’un solveur de
+programmation linéaire en nombres entiers. Sur le volet recommandation
+interactive, la veille s’est appuyée sur les travaux de Liu et
+al. (2024), <em>“An Interactive Food Recommendation System Using
+Reinforcement Learning”</em>, qui ont directement inspiré l’architecture
+du RL Planner.</p>
+<h2 id="spécifications-fonctionnelles">4. Spécifications
+fonctionnelles</h2>
+<h3 id="utilisateurs-types">4.1 Utilisateurs types</h3>
+<ul>
+<li>Un pratiquant de musculation en phase de sèche ou de prise de masse,
+cherchant une cible calorique et protéique précise répartie sur la
+journée</li>
+<li>Une personne suivant un régime alimentaire contraint (vegan, halal,
+casher, sans gluten, bio) qui souhaite un filtrage fiable des
+produits</li>
+<li>Un utilisateur occasionnel qui veut simplement une idée de repas
+équilibré sans réflexion nutritionnelle poussée, éventuellement en
+laissant une politique apprise proposer directement une journée
+complète</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Persona</th>
+<th>Profil</th>
+<th>Besoin principal</th>
+<th>Fonctionnalité clé mobilisée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Le sportif en sèche</td>
+<td>25-35 ans, 4 séances de sport/semaine, objectif de perte de masse
+grasse</td>
+<td>Un contrôle strict des calories et un apport protéique élevé sans
+calcul manuel</td>
+<td>Objectif « Sèche musculaire », Bento Planner, bento désigné pour la
+protéine animale</td>
+</tr>
+<tr>
+<td>La personne à régime contraint</td>
+<td>Vegan ou pratiquant un régime religieux</td>
+<td>Un filtrage fiable, sans devoir vérifier chaque étiquette</td>
+<td>Filtres de régime (tags booléens) appliqués avant optimisation</td>
+</tr>
+<tr>
+<td>L’utilisateur occasionnel</td>
+<td>Curieux de l’outil, pas d’objectif sportif précis</td>
+<td>Une idée de repas équilibré rapide, sans configuration complexe</td>
+<td>RL Planner — génération immédiate d’une journée complète par la
+politique apprise</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description-des-cas-dusage">4.2 Description des cas d’usage</h3>
+<p>L’application se compose de quatre pages accessibles depuis une
+navigation unique (<code>st.navigation</code>) :
+<strong>Profil</strong>, <strong>Bento Planner</strong>,
+<strong>Exploration des ingrédients</strong> et <strong>RL
+Planner</strong>.</p>
+<p><strong>Scénario 1 — Renseignement du profil.</strong> L’utilisateur
+renseigne son profil (genre, âge, poids, taille), son niveau d’activité
+quotidienne, sa fréquence sportive, son objectif physique et un éventuel
+régime alimentaire, ainsi que son plan de repas (nombre de repas,
+catégories, proportions caloriques). Ces informations sont persistées en
+base SQLite (<code>kojin.db</code>), et non plus seulement le temps de
+la session, ce qui permet de retrouver son profil d’une visite à l’autre
+via un pseudo.</p>
+<p><strong>Scénario 2 — Consultation des objectifs journaliers.</strong>
+L’application affiche les objectifs nutritionnels journaliers calculés
+(énergie, protéines, lipides, glucides, portion de légumes) selon la
+formule de Mifflin–St Jeor.</p>
+<p><strong>Scénario 3 — Configuration et composition des bentos (Bento
+Planner).</strong> L’utilisateur choisit le nombre de bentos (un à
+cinq), ajuste la fraction calorique de chacun via des curseurs couplés,
+désigne le bento recevant la protéine animale, puis compose : le solveur
+hybride NNLS + BVLS affiche pour chaque bento les aliments retenus,
+leurs quantités et leur contribution macro-nutritionnelle.</p>
+<p><strong>Scénario 4 — Exploration en langage naturel.</strong>
+L’utilisateur pose une question en langage naturel sur le catalogue
+produits (ex. « Quels produits vegan ont plus de 25 g de protéines pour
+100 g ? ») ; un modèle de langage (Amazon Bedrock) génère une requête
+SQL exécutée en lecture seule sur une base DuckDB matérialisée à partir
+du catalogue.</p>
+<p><strong>Scénario 5 — Planification interactive par renforcement (RL
+Planner).</strong> L’utilisateur se connecte par pseudo ; une politique
+PPO entraînée hors ligne sur les préférences réelles d’utilisateurs
+Food.com génère simultanément une recette pour chaque créneau de repas
+défini dans le profil. L’utilisateur peut demander une nouvelle
+proposition pour un créneau donné (« Changer ») ou valider la journée
+entière, ce qui déclenche la résolution parallèle de chaque ingrédient
+abstrait en produit réel Open Food Facts (via un
+<code>IngredientResolver</code> LLM→SQL→DuckDB) et affine l’embedding de
+préférence de l’utilisateur.</p>
+<p><strong>Scénario 6 — Absence de données locales (cas
+limite).</strong> Si le catalogue préparé n’est pas présent au démarrage
+(premier lancement local), un bouton dédié permet de déclencher le
+pipeline de préparation directement depuis l’interface.</p>
+<h3 id="maquette-interface">4.3 Maquette / interface</h3>
+<p>L’interface repose sur Streamlit avec une barre latérale de
+connexion/navigation et quatre pages en zone principale. La direction
+artistique s’inspire de la typographie japonaise (police serif) pour
+donner à l’outil une identité visuelle sobre et cohérente avec son nom,
+avec un contraste clair/sombre soigné entre la barre latérale (fond
+sombre, texte clair) et le contenu principal (fond clair, texte
+sombre).</p>
+<h2 id="spécifications-techniques-et-architecture">5. Spécifications
+techniques et architecture</h2>
+<h3 id="vue-densemble-de-la-stack">5.1 Vue d’ensemble de la stack</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Composant</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Streamlit</td>
+<td>Interface web multipage et interactions utilisateur</td>
+</tr>
+<tr>
+<td>Polars, DuckDB</td>
+<td>Chargement/filtrage du catalogue produits et requêtage SQL en
+lecture seule (page Exploration)</td>
+</tr>
+<tr>
+<td>SciPy (<code>nnls</code>, <code>lsq_linear</code>/BVLS)</td>
+<td>Solveur d’optimisation linéaire sous contraintes pour la composition
+des bentos</td>
+</tr>
+<tr>
+<td>PyTorch (NCF + PPO résiduel)</td>
+<td>Politique de recommandation interactive du RL Planner (Liu et al.,
+2024)</td>
+</tr>
+<tr>
+<td>LangChain (core, aws, anthropic, openai)</td>
+<td>Abstraction d’appel aux modèles de langage, NL→SQL</td>
+</tr>
+<tr>
+<td>Hugging Face Hub</td>
+<td>Téléchargement du dataset Open Food Facts
+(<code>food.parquet</code>, ~6,7 Go)</td>
+</tr>
+<tr>
+<td>Kaggle / kagglehub</td>
+<td>Téléchargement du dataset Food.com (recettes et avis) pour
+l’entraînement du RL Planner</td>
+</tr>
+<tr>
+<td>boto3 / Amazon Bedrock</td>
+<td>Authentification par rôle IAM, appel du modèle de langage en
+production</td>
+</tr>
+<tr>
+<td>AWS ECS Fargate (ARM64), S3, EFS, ALB</td>
+<td>Hébergement, stockage et exposition de l’application en
+production</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calcul-des-objectifs-nutritionnels">5.2 Calcul des objectifs
+nutritionnels</h3>
+<p>Le métabolisme de base (BMR) est calculé avec la formule de
+Mifflin–St Jeor, puis ajusté par un multiplicateur combinant l’activité
+quotidienne et la fréquence sportive (plafonné à 1,95) pour obtenir la
+dépense énergétique totale (TDEE). Les cibles finales sont dérivées de
+ce TDEE : l’énergie journalière est modulée par un facteur propre à
+l’objectif (0,90 en sèche, 1,00 en maintien, 1,15 en prise de masse),
+les protéines sont calculées au poids de corps (1,6 à 2,2 g/kg selon
+l’objectif), les lipides sont dérivés d’un pourcentage de l’énergie
+totale, et les glucides comblent le reste de l’énergie journalière avec
+un plancher de 50 g.</p>
+<p><strong>Exemple chiffré</strong> — homme, 28 ans, 78 kg, 1,80 m,
+activité modérée, 4 séances de sport/semaine, objectif « sèche
+musculaire » :</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Étape</th>
+<th>Calcul</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BMR (Mifflin–St Jeor)</td>
+<td>10×78 + 6,25×180 − 5×28 + 5</td>
+<td>≈ 1 744 kcal</td>
+</tr>
+<tr>
+<td>Multiplicateur d’activité</td>
+<td>activité modérée + fréquence sportive (plafonné à 1,95)</td>
+<td>≈ 1,55</td>
+</tr>
+<tr>
+<td>TDEE</td>
+<td>1 744 × 1,55</td>
+<td>≈ 2 703 kcal</td>
+</tr>
+<tr>
+<td>Énergie cible (sèche, facteur 0,90)</td>
+<td>2 703 × 0,90</td>
+<td>≈ 2 433 kcal</td>
+</tr>
+<tr>
+<td>Protéines (2,2 g/kg en sèche)</td>
+<td>2,2 × 78</td>
+<td>≈ 172 g</td>
+</tr>
+<tr>
+<td>Lipides (25 % de l’énergie, /9)</td>
+<td>(2 433 × 0,25) / 9</td>
+<td>≈ 68 g</td>
+</tr>
+<tr>
+<td>Glucides (reste de l’énergie, /4)</td>
+<td>(2 433 − 4×172 − 9×68) / 4</td>
+<td>≈ 264 g</td>
+</tr>
+</tbody>
+</table>
+<h3 id="algorithme-de-composition-des-bentos">5.3 Algorithme de
+composition des bentos</h3>
+<p>Pour chaque bento, le problème est modélisé comme un système linéaire
+sous contraintes : un vecteur cible (calories, protéines, lipides,
+glucides, fibres, portion de légumes) doit être approché par une
+combinaison de quantités d’aliments, bornée par une portion maximale par
+défaut de 200 g.</p>
+<p>La résolution est hybride en deux temps : un premier passage par NNLS
+présélectionne les produits pertinents parmi le catalogue filtré, puis
+un second passage par BVLS (<code>lsq_linear</code>,
+<code>method="bvls"</code>) affine les quantités sur ce sous-ensemble
+restreint. Un post-traitement métier applique des règles de bon sens :
+au maximum une source de protéine animale par jour et uniquement sur le
+bento désigné, au maximum une huile ajoutée, et aucun doublon d’aliment
+d’un bento à l’autre.</p>
+<p>En notant x le vecteur des quantités des n produits présélectionnés,
+M la matrice n×k des teneurs en nutriments et c le vecteur cible du
+bento, le second passage s’écrit : minimiser ‖Mᵀx − c‖² sous contrainte
+0 ≤ x ≤ portion_max.</p>
+<h3 id="pipeline-dacquisition-et-de-préparation-des-données">5.4
+Pipeline d’acquisition et de préparation des données</h3>
+<p>Le script <code>data_prep_nutriments.py</code> télécharge le dataset
+Open Food Facts (<code>openfoodfacts/product-database</code>, ~6,7 Go au
+format Parquet, via Hugging Face Hub et le protocole Xet) puis le traite
+en streaming par groupes de lignes. Le traitement filtre les produits
+commercialisés en France et non obsolètes, extrait cinq
+macro-nutriments, ajoute des indicateurs booléens de régime (vegan,
+halal, végétarien, sans gluten, casher, sans huile de palme, bio) et de
+catégorie (viande, poisson, laitier, pain), et exclut les produits
+ultra-transformés (NOVA 4). Le résultat, un CSV d’environ 95 Mo (145 021
+produits retenus lors de l’exécution de référence), est directement
+exploitable par l’application ou déposé sur S3 pour la production.</p>
+<h3
+id="recommandation-par-renforcement-rl-planner-et-génération-de-contenu-llm">5.5
+Recommandation par renforcement (RL Planner) et génération de contenu
+(LLM)</h3>
+<p><strong>RL Planner.</strong> L’implémentation suit Liu et al. (2024).
+Une phase d’entraînement hors ligne unique construit, à partir du
+dataset Food.com (recettes et avis réels, filtré à 50 000 recettes et 2
+855 utilisateurs actifs), un simulateur de préférences par Neural
+Collaborative Filtering (NCF), puis entraîne une politique PPO
+résiduelle à maximiser les notes prédites par ce simulateur. Le
+checkpoint produit (~529 Mo) embarque la matrice de préférence NCF,
+l’état fusionné (<code>FusedState</code>) et les poids de la politique.
+En inférence, un nouvel utilisateur Kōjin (absent de l’entraînement)
+démarre sur un état moyen (“goût moyen” Food.com) qui se personnalise
+par accumulation des repas validés au fil des sessions, via un embedding
+utilisateur affiné par 30 pas de descente de gradient après chaque
+validation de journée.</p>
+<p><strong>Exploration en langage naturel.</strong> La page Exploration
+traduit une question en langage naturel en requête SQL DuckDB via un
+modèle de langage appelé par LangChain. En production, ce modèle est
+invoqué via Amazon Bedrock, authentifié par le rôle IAM attaché à la
+tâche ECS — sans clé d’API stockée dans le code ni dans l’image. Le
+choix du modèle de référence a évolué au cours du projet (voir §8.11) :
+Amazon Nova Pro (<code>us.amazon.nova-pro-v1:0</code>) est le modèle
+finalement retenu en production, un modèle Anthropic Claude ayant été
+testé en premier lieu mais nécessitant une validation administrative
+supplémentaire (formulaire d’usage prévu, spécifique aux modèles tiers
+sur Bedrock) non compatible avec le calendrier du projet.</p>
+<h2 id="architecture-globale">6. Architecture globale</h2>
+<pre><code>Utilisateur (navigateur, n&#39;importe où sur Internet)
+        │  HTTP
+        ▼
+Application Load Balancer (kojin-alb, sous-réseaux publics du VPC)
+        │  :8501, sticky sessions
+        ▼
+ECS Fargate — tâche unique (architecture ARM64 / Graviton)
+  Conteneur Streamlit (kojin-web)
+   • streamlit_app.py — st.navigation (Profil, Bento Planner, Exploration, RL Planner)
+   • CSV produits + kojin.db + reciperl.pt lus depuis /app/data (volume EFS)
+        │                    │                            │
+        ▼                    ▼                            ▼
+   Amazon EFS           Amazon S3                   Amazon Bedrock
+   (kojin-data)         (CSV initial,               (Nova Pro — NL→SQL,
+   kojin.db,            reciperl.pt de secours)      consignes)
+   reciperl.pt
+   — persistants
+   entre redéploiements
+
+Logs applicatifs → CloudWatch Logs (/ecs/kojin)</code></pre>
+<p>Le flux applicatif se lit ainsi : l’utilisateur adresse ses requêtes
+HTTP à l’Application Load Balancer, public et accessible depuis
+n’importe quel poste connecté à Internet, qui les répartit vers l’unique
+tâche ECS Fargate exécutant le conteneur Streamlit. Cette tâche monte un
+volume EFS sur <code>/app/data</code> : contrairement à une tâche
+Fargate « nue » dont le disque est perdu à chaque redémarrage, ce volume
+conserve les profils utilisateurs (<code>kojin.db</code>) et le
+checkpoint du RL Planner (<code>reciperl.pt</code>, trop volumineux pour
+être embarqué dans l’image Docker) d’un déploiement à l’autre. La tâche
+invoque Amazon Bedrock à la demande, en s’authentifiant via le rôle IAM
+qui lui est attaché plutôt que par une clé statique.</p>
+<h2 id="exigences-transverses">7. Exigences transverses</h2>
+<ul>
+<li><strong>Automatisation</strong> : aucune étape manuelle de transfert
+de données en production ; la préparation du catalogue peut être
+redéclenchée depuis l’interface elle-même si le CSV est absent</li>
+<li><strong>Évolutivité</strong> : le pipeline de préparation est
+rejouable pour intégrer les mises à jour du dataset Open Food Facts ; le
+volume EFS découple la persistance des données du cycle de vie de la
+tâche de calcul</li>
+<li><strong>Data et traitement dans le cloud</strong> : hébergement du
+CSV et des artefacts persistants sur S3/EFS, calcul et service
+applicatif sur ECS Fargate, appel de modèle via Bedrock</li>
+<li><strong>Disponibilité, sécurité, légalité</strong> : exposition via
+un Application Load Balancer public, accès au modèle par rôle IAM plutôt
+que par clé statique, données sources sous licence ouverte ODbL</li>
+<li><strong>FinOps</strong> : dimensionnement de la tâche ajusté au réel
+besoin (2 vCPU / 8 Go pour supporter le RL Planner), architecture
+ARM64/Graviton moins coûteuse que x86, image Docker optimisée (torch
+CPU-only), budget AWS avec alerte automatique par e-mail à 50 % de la
+dépense réelle et 100 % de la dépense prévisionnelle</li>
+</ul>
+<h2 id="déploiement">8. Déploiement</h2>
+<p>L’application est packagée pour un déploiement conteneurisé sur AWS,
+orchestré par ECS Fargate derrière un Application Load Balancer, avec
+les données produits et les artefacts persistants stockés respectivement
+sur S3 et EFS. Le déploiement décrit ci-dessous est celui
+<strong>effectivement réalisé</strong> (procédure pas à pas dans
+<code>DEPLOYMENT.md</code> du dépôt), et diffère sur plusieurs points
+d’un déploiement générique de référence — ces écarts, et les incidents
+rencontrés en les découvrant, sont documentés en §8.11.</p>
+<h3 id="réseau-et-sécurité-vpc-security-groups">8.1 Réseau et sécurité
+(VPC, security groups)</h3>
+<p>Le déploiement s’appuie sur les sous-réseaux publics du VPC par
+défaut de la région <strong>us-east-1</strong> et repose sur trois
+groupes de sécurité distincts, appliquant le principe de moindre
+privilège réseau :</p>
+<ul>
+<li><strong><code>kojin-alb-sg</code></strong> : autorise le trafic
+entrant sur les ports 80 (et 443 en prévision d’un futur certificat TLS)
+depuis Internet (<code>0.0.0.0/0</code>)</li>
+<li><strong><code>kojin-svc-sg</code></strong> : n’autorise le port
+applicatif 8501 (Streamlit) qu’en provenance du security group de l’ALB
+— la tâche ECS n’est donc jamais directement exposée sur Internet</li>
+<li><strong><code>kojin-efs-sg</code></strong> : n’autorise le port NFS
+2049 qu’en provenance du security group du service ECS</li>
+</ul>
+<p>Streamlit reposant sur des WebSockets, le target group active la
+persistance de session (sticky sessions, cookie de répartiteur, durée 24
+h) en plus du contrôle de santé applicatif sur
+<code>/_stcore/health</code>.</p>
+<h3 id="conteneurisation-et-dimensionnement-de-la-tâche-ecs-fargate">8.2
+Conteneurisation et dimensionnement de la tâche ECS Fargate</h3>
+<p>L’application est packagée dans une image Docker
+(<code>python:3.12-slim</code>) contenant le code Python, ses
+dépendances et les pages <code>app_pages/</code>, ainsi que le package
+<code>reciperl/</code> nécessaire au RL Planner. Cette image est poussée
+vers Amazon ECR (<code>kojin-streamlit</code>), puis référencée dans une
+définition de tâche ECS précisant :</p>
+<ul>
+<li><strong>CPU / mémoire : 2 vCPU / 8 Go</strong> — dimensionnement
+relevé par rapport à un déploiement sans RL Planner (qui se contenterait
+de 1 vCPU / 4 Go), car PyTorch doit charger en mémoire le checkpoint
+<code>reciperl.pt</code> (matrice de préférence 2 855 × 39 280) en plus
+de Polars/SciPy et du cache Streamlit du catalogue ;</li>
+<li><strong>Architecture : ARM64 (Graviton)</strong> — l’image ayant été
+construite nativement sur un poste de développement Apple Silicon, la
+tâche est configurée en
+<code>runtimePlatform: {cpuArchitecture: ARM64}</code> plutôt que
+reconstruite pour x86_64, ce qui évite l’émulation et réduit le coût de
+calcul ;</li>
+<li><strong>Port exposé</strong> : 8501 ;</li>
+<li><strong>Volume EFS</strong> monté sur <code>/app/data</code> (voir
+§8.4) ;</li>
+<li><strong>Contrôle de santé applicatif</strong> sur
+<code>/_stcore/health</code> toutes les 30 secondes.</li>
+</ul>
+<p>Le service ECS maintient le nombre de tâches souhaité (1 en régime de
+démonstration), redémarre automatiquement une tâche défaillante, et peut
+être relié à une politique d’auto-scaling ciblant 60 % d’utilisation CPU
+(borne de 1 à 4 tâches) pour absorber les pics de charge.</p>
+<h3 id="exposition-via-lapplication-load-balancer-et-accès-public">8.3
+Exposition via l’Application Load Balancer et accès public</h3>
+<p>L’ALB (<code>kojin-alb</code>) reçoit le trafic entrant, répartit les
+requêtes vers le groupe cible constitué de la tâche ECS en cours
+d’exécution sur le port 8501, et retire automatiquement toute tâche dont
+le contrôle de santé échoue. L’application est exposée en HTTP sur le
+port 80 (un listener HTTPS avec certificat ACM et redirection 80→443 est
+documenté comme évolution de mise en production, cf. §12.2).</p>
+<p><strong>L’application est accessible publiquement, depuis n’importe
+quel poste connecté à Internet (pas seulement la machine de
+déploiement), à l’adresse :</strong></p>
+<p><strong>http://kojin-alb-1461380392.us-east-1.elb.amazonaws.com</strong></p>
+<h3 id="stockage-des-données-s3-et-efs">8.4 Stockage des données (S3 et
+EFS)</h3>
+<p>Deux mécanismes de stockage coexistent, avec des rôles distincts
+:</p>
+<ul>
+<li><strong>Amazon S3</strong> (<code>kojin-data-&lt;compte&gt;</code>,
+versioning activé, accès public bloqué) héberge le CSV produits et sert
+de copie de secours du checkpoint RL. Le CSV est téléchargé par la tâche
+au démarrage via <code>DATA_S3_URI</code> s’il n’est pas déjà présent
+localement.</li>
+<li><strong>Amazon EFS</strong> (<code>kojin-data</code>, monté sur
+<code>/app/data</code> via un access point dédié, chiffrement en transit
+activé) assure la <strong>persistance</strong> de <code>kojin.db</code>
+(profils utilisateurs, plans de repas, embeddings RL) et de
+<code>reciperl.pt</code> (checkpoint RL, ~529 Mo) à travers les
+redémarrages et redéploiements de la tâche — une tâche Fargate étant par
+nature sans état, ces données seraient sinon perdues à chaque mise à
+jour du service. Le volume est peuplé une première fois via une tâche
+Fargate de « bootstrap » qui copie les fichiers depuis S3 vers
+l’EFS.</li>
+</ul>
+<h3 id="identités-et-permissions-iam">8.5 Identités et permissions
+(IAM)</h3>
+<p>Deux rôles IAM distincts interviennent sur la tâche ECS, chacun avec
+sa politique de confiance autorisant
+<code>ecs-tasks.amazonaws.com</code> à l’assumer :</p>
+<ul>
+<li><strong><code>kojin-ecs-execution-role</code></strong> porte la
+politique managée <code>AmazonECSTaskExecutionRolePolicy</code> (pull
+ECR, écriture des logs CloudWatch) ;</li>
+<li><strong><code>kojin-ecs-task-role</code></strong> est utilisé par le
+code applicatif : il porte une politique de lecture S3 restreinte au
+bucket de données et une politique d’invocation Bedrock.</li>
+</ul>
+<p>Aucune clé d’accès statique n’est stockée dans le code ni dans
+l’image Docker : l’authentification applicative repose entièrement sur
+ce rôle de tâche.</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span> <span class="dt">&quot;Version&quot;</span><span class="fu">:</span> <span class="st">&quot;2012-10-17&quot;</span><span class="fu">,</span> <span class="dt">&quot;Statement&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;Effect&quot;</span><span class="fu">:</span> <span class="st">&quot;Allow&quot;</span><span class="fu">,</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;Action&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;bedrock:InvokeModel&quot;</span><span class="ot">,</span> <span class="st">&quot;bedrock:InvokeModelWithResponseStream&quot;</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;Resource&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;arn:aws:bedrock:*::foundation-model/*&quot;</span><span class="ot">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;arn:aws:bedrock:us-east-1:&lt;compte&gt;:inference-profile/*&quot;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span><span class="ot">]</span> <span class="fu">}</span></span></code></pre></div>
+<h3 id="pipeline-de-mise-en-production">8.6 Pipeline de mise en
+production</h3>
+<p>La mise en production a suivi une séquence manuelle et reproductible,
+documentée dans <code>DEPLOYMENT.md</code> : construction de l’image
+Docker, publication vers ECR, création/mise à jour de la définition de
+tâche, puis mise à jour du service ECS qui bascule le trafic vers la
+nouvelle tâche. Deux mises à jour de service ont été nécessaires lors du
+déploiement réel pour corriger, respectivement, un problème
+d’architecture de conteneur et un problème de modèle Bedrock (§8.11) —
+chacune résolue par un simple
+<code>update-service --force-new-deployment</code> après correction de
+la task definition, sans interruption longue de service. Il n’y a pas, à
+ce stade, d’intégration continue automatisée (pas de dossier
+<code>.github/workflows</code>) : il s’agit d’une piste d’amélioration
+identifiée (§12.2).</p>
+<h3 id="supervision-alertes-et-finops">8.7 Supervision, alertes et
+FinOps</h3>
+<p>Les journaux applicatifs sont collectés dans le groupe CloudWatch
+Logs <code>/ecs/kojin</code>. Un socle d’alarmes est recommandé (CPU
+&gt; 80 % pendant 10 min, mémoire &gt; 85 % pendant 5 min, taux d’erreur
+5xx &gt; 1 %, <code>UnHealthyHostCount ≥ 1</code>).</p>
+<p>Sur le plan FinOps, un <strong>budget AWS</strong>
+(<code>kojin-monthly-budget</code>, plafond 30 $/mois) a été mis en
+place avec deux alertes par e-mail : à 50 % de la dépense réelle et à
+100 % de la dépense prévisionnelle, avant même le lancement du
+déploiement — une mesure de sobriété budgétaire directement motivée par
+le passage d’un compte AWS Academy (temporaire, budget préalloué) à un
+compte AWS personnel (facturation réelle et continue).</p>
+<h3 id="estimation-des-coûts-finops">8.8 Estimation des coûts
+(FinOps)</h3>
+<table>
+<thead>
+<tr>
+<th>Ressource</th>
+<th>Configuration</th>
+<th>Coût mensuel estimé (usage continu)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ECS Fargate</td>
+<td>1 tâche, 2 vCPU / 8 Go ARM64, 24 h/24</td>
+<td>≈ 60 €</td>
+</tr>
+<tr>
+<td>Application Load Balancer</td>
+<td>1 ALB, trafic faible</td>
+<td>≈ 18 €</td>
+</tr>
+<tr>
+<td>Amazon EFS</td>
+<td>~1 Go (kojin.db + reciperl.pt)</td>
+<td>≈ 0,3 €</td>
+</tr>
+<tr>
+<td>Amazon ECR</td>
+<td>~0,7 Go stocké (image optimisée)</td>
+<td>&lt; 1 €</td>
+</tr>
+<tr>
+<td>CloudWatch Logs</td>
+<td>≈ 1 Go</td>
+<td>≈ 0,6 €</td>
+</tr>
+<tr>
+<td>Amazon S3</td>
+<td>&lt; 1 Go (CSV + checkpoint de secours)</td>
+<td>&lt; 0,1 €</td>
+</tr>
+<tr>
+<td><strong>Total (usage continu)</strong></td>
+<td></td>
+<td><strong>≈ 80 €/mois</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Ce coût mensuel suppose un fonctionnement continu ; pour l’usage réel
+du projet (déploiement de démonstration sur quelques jours), le coût
+facturé est proportionnellement bien inférieur, AWS facturant à l’heure
+d’usage effectif et non au forfait mensuel. Le dimensionnement 2 vCPU /
+8 Go — supérieur à celui envisagé initialement (1 vCPU / 4 Go) —
+s’explique entièrement par le RL Planner ; sans cette page, le coût
+redescendrait proche de 50 €/mois.</p>
+<h3 id="checklist-de-mise-en-production-et-nettoyage">8.9 Checklist de
+mise en production et nettoyage</h3>
+<p>Le guide de déploiement se conclut par une checklist de mise en
+production (bucket versionné et fermé au public, volume EFS peuplé,
+image sans CSV ni checkpoint embarqués, rôles IAM créés, task definition
+avec volume EFS et architecture ARM64 déclarée, ALB avec sticky
+sessions, security groups restreints, budget configuré) ainsi qu’une
+procédure de nettoyage complète (arrêt du service, suppression du
+cluster, du load balancer, de l’EFS, du dépôt ECR et du bucket S3),
+utile pour maîtriser les coûts entre deux démonstrations — le
+déploiement de ce projet étant, par construction, temporaire.</p>
+<h3 id="variables-denvironnement-principales">8.10 Variables
+d’environnement principales</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valeur en production</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LLM_PROVIDER</code></td>
+<td><code>bedrock</code></td>
+<td>Force l’usage de Bedrock (pas de repli auto en production)</td>
+</tr>
+<tr>
+<td><code>BEDROCK_MODEL_ID</code></td>
+<td><code>us.amazon.nova-pro-v1:0</code></td>
+<td>Modèle Bedrock de référence (voir §8.11 pour la justification du
+choix)</td>
+</tr>
+<tr>
+<td><code>AWS_REGION</code></td>
+<td><code>us-east-1</code></td>
+<td>Région AWS où le modèle est invoqué</td>
+</tr>
+<tr>
+<td><code>DATA_S3_URI</code></td>
+<td><code>s3://kojin-data-&lt;compte&gt;/products_names_with_macro_nutriments.csv</code></td>
+<td>Emplacement S3 du CSV de secours</td>
+</tr>
+<tr>
+<td><code>STREAMLIT_SERVER_HEADLESS</code></td>
+<td><code>true</code></td>
+<td>Démarrage sans ouverture de navigateur local</td>
+</tr>
+</tbody>
+</table>
+<h3 id="incidents-de-déploiement-rencontrés-et-résolus">8.11 Incidents
+de déploiement rencontrés et résolus</h3>
+<p>Le déploiement réel a mis en évidence trois incidents non anticipés
+dans la documentation initiale, corrigés au fil de l’eau et intégrés à
+<code>DEPLOYMENT.md</code> pour un prochain déploiement :</p>
+<ol type="1">
+<li><strong>Image Docker surdimensionnée (9,8 Go).</strong>
+<code>requirements.txt</code> référence <code>torch</code> sans préciser
+d’index ; sur une image Linux, <code>pip</code> installe par défaut la
+roue CUDA complète (bibliothèques NVIDIA), inutile sur Fargate qui ne
+dispose pas de GPU. Installer <code>torch</code> depuis l’index CPU
+officiel (<code>https://download.pytorch.org/whl/cpu</code>) avant le
+reste des dépendances a ramené l’image à 3,05 Go, réduisant d’autant le
+temps de publication vers ECR.</li>
+<li><strong>Incompatibilité d’architecture de conteneur.</strong>
+L’image construite sur un poste de développement Apple Silicon est
+nativement <code>linux/arm64</code> ; la tâche ECS, faute de déclaration
+explicite, attend par défaut <code>linux/amd64</code>, provoquant un
+échec <code>CannotPullContainerError</code>. La correction retenue
+déclare <code>runtimePlatform: {cpuArchitecture: ARM64}</code> dans la
+définition de tâche plutôt que de reconstruire l’image pour x86_64 par
+émulation — solution à la fois plus rapide et moins coûteuse (Fargate
+Graviton).</li>
+<li><strong>Blocage administratif sur le modèle Bedrock
+Anthropic.</strong> Le modèle initialement retenu pour sa qualité de
+génération SQL (<code>us.anthropic.claude-sonnet-4-6</code>) a échoué en
+production avec l’erreur
+<code>ResourceNotFoundException: Model use case details have not been submitted for this account</code>
+— une exigence de conformité propre aux modèles tiers (Anthropic) sur
+Bedrock, nécessitant de remplir un formulaire d’usage prévu et
+d’attendre une validation. Pour ne pas bloquer la démonstration,
+l’équipe a basculé sur <strong>Amazon Nova Pro</strong>
+(<code>us.amazon.nova-pro-v1:0</code>), un modèle propriétaire AWS non
+soumis à cette exigence tierce, immédiatement opérationnel après un
+simple redéploiement de la task definition.</li>
+</ol>
+<h2 id="organisation-du-projet-et-travail-en-équipe">9. Organisation du
+projet et travail en équipe</h2>
+<h3 id="équipe-et-référent-fonctionnel">9.1 Équipe et référent
+fonctionnel</h3>
+<table>
+<thead>
+<tr>
+<th>Membre</th>
+<th>Classe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MOREL Tom</td>
+<td>MAS_SE2_000_ALT — 5ESGI IABD CL A ALT RO</td>
+</tr>
+<tr>
+<td>EL KHEIR Douaa</td>
+<td>MAS_SE2_000_ALT — 5ESGI IABD CL A ALT RO</td>
+</tr>
+<tr>
+<td>ELKADOURI Hajar</td>
+<td>MAS_SE2_000_ALT — 5ESGI IABD CL A ALT RO</td>
+</tr>
+<tr>
+<td>ZAIDI Yassine</td>
+<td>MAS_SE2_000_ALT — 5ESGI IABD CL A ALT RO</td>
+</tr>
+</tbody>
+</table>
+<p>Référent pédagogique : Mme Amrita Devy BALASOUPRAMANIANE.</p>
+<h3 id="méthode-de-travail">9.2 Méthode de travail</h3>
+<p>L’équipe a fonctionné selon un rythme itératif calé sur les séances
+de suivi imposées par le référent pédagogique. Le code a été versionné
+sur un dépôt Git partagé (GitHub), avec relectures croisées avant
+fusion. La coordination quotidienne s’est faite via un serveur Discord
+dédié, en complément des échanges de code sur GitHub.</p>
+<h3 id="répartition-des-tâches">9.3 Répartition des tâches</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Domaine</th>
+<th>Membre référent</th>
+<th>Charge estimée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intégration LLM (Bedrock) et déploiement AWS</td>
+<td>MOREL Tom</td>
+<td>≈ 115 h</td>
+</tr>
+<tr>
+<td>Interface Streamlit et expérience utilisateur</td>
+<td>EL KHEIR Douaa</td>
+<td>≈ 100 h</td>
+</tr>
+<tr>
+<td>Moteur de calcul (nutrition + solveur NNLS/BVLS) et RL Planner</td>
+<td>ELKADOURI Hajar</td>
+<td>≈ 110 h</td>
+</tr>
+<tr>
+<td>Pipeline de données (Open Food Facts, filtrage, tags)</td>
+<td>ZAIDI Yassine</td>
+<td>≈ 105 h</td>
+</tr>
+</tbody>
+</table>
+<h3 id="planning-et-suivi-des-séances">9.4 Planning et suivi des
+séances</h3>
+<p>Le projet a été suivi par le référent pédagogique au travers de trois
+séances de suivi avant la soutenance finale, chacune donnant lieu à un
+document de suivi partagé.</p>
+<h2 id="qualité-dusage-tests-et-validation">10. Qualité d’usage, tests
+et validation</h2>
+<p>L’installation et le lancement de l’application ont été testés en
+local (environnement virtuel Python 3.12, installation des dépendances,
+préparation des données, entraînement d’un checkpoint RL Planner sur le
+dataset Food.com) ainsi qu’en configuration cloud réelle sur AWS,
+jusqu’à l’obtention d’une URL publique fonctionnelle.</p>
+<h3 id="plan-de-tests-fonctionnels">10.1 Plan de tests fonctionnels</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Cas de test</th>
+<th>Résultat attendu</th>
+<th>Statut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Saisie d’un profil complet</td>
+<td>Objectifs journaliers affichés et cohérents avec Mifflin–St
+Jeor</td>
+<td>Validé</td>
+</tr>
+<tr>
+<td>Sélection d’un régime restrictif (ex. vegan)</td>
+<td>Aucun produit hors régime dans les bentos générés</td>
+<td>Validé</td>
+</tr>
+<tr>
+<td>Répartition sur plusieurs bentos avec fractions couplées</td>
+<td>La somme des fractions reste égale à 100 % après ajustement</td>
+<td>Validé</td>
+</tr>
+<tr>
+<td>Composition avec protéine animale désignée sur un seul bento</td>
+<td>Aucune autre occurrence de protéine animale sur les autres
+bentos</td>
+<td>Validé</td>
+</tr>
+<tr>
+<td>Entraînement et chargement du checkpoint RL Planner</td>
+<td>Génération d’une journée complète de recettes sans erreur</td>
+<td>Validé</td>
+</tr>
+<tr>
+<td>Requête en langage naturel (page Exploration)</td>
+<td>SQL généré et exécuté correctement sur DuckDB</td>
+<td>Validé (après bascule sur Nova Pro, §8.11)</td>
+</tr>
+<tr>
+<td>Premier lancement sans CSV local</td>
+<td>Le bouton de préparation des données apparaît et déclenche le
+pipeline</td>
+<td>Validé</td>
+</tr>
+<tr>
+<td>Déploiement AWS de bout en bout</td>
+<td>Application accessible publiquement, health check HTTP 200</td>
+<td>Validé</td>
+</tr>
+<tr>
+<td>Accès depuis un poste tiers (hors machine de déploiement)</td>
+<td>Interface identique accessible via l’URL publique</td>
+<td>Validé</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gestion-des-risques">11. Gestion des risques</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Risque</th>
+<th>Impact</th>
+<th>Mitigation retenue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Indisponibilité ou restriction d’usage d’un modèle Bedrock tiers
+(Anthropic)</td>
+<td>Fonctionnalité LLM indisponible en production</td>
+<td>Bascule vers un modèle propriétaire AWS (Nova Pro) non soumis à
+validation administrative tierce (incident réel, §8.11)</td>
+</tr>
+<tr>
+<td>Incompatibilité d’architecture de conteneur (ARM64 vs amd64)</td>
+<td>Échec de démarrage de la tâche ECS</td>
+<td>Déclaration explicite de <code>runtimePlatform</code> dans la task
+definition (incident réel, §8.11)</td>
+</tr>
+<tr>
+<td>Durée de préparation des données trop longue en démonstration</td>
+<td>Blocage lors d’une démonstration live</td>
+<td>Préparation du CSV en amont et dépôt sur S3 avant toute
+présentation</td>
+</tr>
+<tr>
+<td>Qualité hétérogène des fiches Open Food Facts</td>
+<td>Compositions de bento peu réalistes</td>
+<td>Filtrage sur produits non obsolètes, exclusion NOVA 4, tags de
+régime vérifiés</td>
+</tr>
+<tr>
+<td>Perte de données utilisateur au redémarrage d’une tâche Fargate sans
+état</td>
+<td>Profils et checkpoint RL perdus à chaque redéploiement</td>
+<td>Volume EFS persistant monté sur <code>/app/data</code></td>
+</tr>
+<tr>
+<td>Dérive de coût cloud (passage à un compte personnel facturé en
+continu)</td>
+<td>Dépassement budgétaire non détecté</td>
+<td>Budget AWS avec alertes automatiques à 50 %/100 %, nettoyage complet
+des ressources prévu en fin de démonstration</td>
+</tr>
+<tr>
+<td>Dépendance à un seul membre sur un domaine technique</td>
+<td>Blocage en cas d’indisponibilité</td>
+<td>Relecture croisée systématique du code avant fusion</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bilan-de-réalisation">12. Bilan de réalisation</h2>
+<h3 id="limites-actuelles">12.1 Limites actuelles</h3>
+<ul>
+<li>La qualité nutritionnelle de certains produits Open Food Facts reste
+hétérogène malgré le filtrage appliqué</li>
+<li>La préparation initiale des données reste une étape longue
+(plusieurs dizaines de minutes selon la stabilité de la connexion
+réseau) qui doit être anticipée avant une démonstration</li>
+<li>Le solveur repose sur des bornes de portion par défaut (200 g) non
+encore personnalisables par l’utilisateur</li>
+<li>Le RL Planner souffre d’un problème de cold-start pour tout nouvel
+utilisateur (non présent dans les 2 855 profils Food.com d’entraînement)
+: la personnalisation ne s’opère que progressivement, par accumulation
+de journées validées</li>
+<li>Le pipeline de mise en production n’est, à ce stade, pas automatisé
+de bout en bout (pas de CI/CD)</li>
+<li>Le déploiement AWS réalisé est temporaire par nature (compte
+personnel, nettoyage prévu en fin de démonstration) et non conçu comme
+un service permanent</li>
+</ul>
+<h3 id="améliorations-possibles">12.2 Améliorations possibles</h3>
+<ul>
+<li>Mettre en place une intégration continue déclenchant automatiquement
+le déploiement ECS depuis la branche principale</li>
+<li>Ajouter des alarmes CloudWatch actives (taux d’erreur, latence) pour
+un suivi proactif</li>
+<li>Ajouter un certificat TLS (ACM) et un nom de domaine pour un accès
+HTTPS</li>
+<li>Réentraîner le RL Planner sur les interactions réelles des
+utilisateurs Kōjin plutôt que sur le seul simulateur Food.com</li>
+<li>Soumettre le formulaire d’usage Anthropic pour réévaluer l’usage de
+Claude en complément de Nova Pro</li>
+</ul>
+<h3 id="perspectives-à-court-moyen-et-long-terme">12.3 Perspectives à
+court, moyen et long terme</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Horizon</th>
+<th>Objectif</th>
+<th>Statut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Court terme</td>
+<td>Finaliser la documentation, déploiement AWS fonctionnel,
+soutenance</td>
+<td>Réalisé</td>
+</tr>
+<tr>
+<td>Moyen terme</td>
+<td>Mettre en place l’intégration continue et les alarmes de
+supervision</td>
+<td>Non démarré</td>
+</tr>
+<tr>
+<td>Long terme</td>
+<td>Historique utilisateur enrichi, filtrage qualité avancé, mode
+multi-jours</td>
+<td>Piste identifiée</td>
+</tr>
+</tbody>
+</table>
+<h2 id="glossaire">13. Glossaire</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Terme</th>
+<th>Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BMR</td>
+<td>Métabolisme de base (Basal Metabolic Rate)</td>
+</tr>
+<tr>
+<td>TDEE</td>
+<td>Dépense énergétique totale journalière</td>
+</tr>
+<tr>
+<td>NNLS</td>
+<td>Non-Negative Least Squares</td>
+</tr>
+<tr>
+<td>BVLS</td>
+<td>Bounded-Variable Least Squares</td>
+</tr>
+<tr>
+<td>NCF</td>
+<td>Neural Collaborative Filtering — modélisation des préférences
+utilisateur/item par réseau de neurones</td>
+</tr>
+<tr>
+<td>PPO</td>
+<td>Proximal Policy Optimization — algorithme d’apprentissage par
+renforcement</td>
+</tr>
+<tr>
+<td>NOVA</td>
+<td>Classification des aliments selon leur degré de transformation</td>
+</tr>
+<tr>
+<td>ODbL</td>
+<td>Open Database License</td>
+</tr>
+<tr>
+<td>ECS Fargate</td>
+<td>Service AWS de conteneurs serverless</td>
+</tr>
+<tr>
+<td>Graviton</td>
+<td>Famille de processeurs ARM64 conçus par AWS, alternative moins
+coûteuse à x86 sur Fargate</td>
+</tr>
+<tr>
+<td>EFS</td>
+<td>Elastic File System — système de fichiers réseau persistant AWS</td>
+</tr>
+<tr>
+<td>ALB</td>
+<td>Application Load Balancer</td>
+</tr>
+<tr>
+<td>IAM</td>
+<td>Identity and Access Management</td>
+</tr>
+<tr>
+<td>Bedrock</td>
+<td>Service AWS d’accès à des modèles de langage managés</td>
+</tr>
+<tr>
+<td>FinOps</td>
+<td>Pratiques de pilotage et d’optimisation des coûts liés au cloud</td>
+</tr>
+</tbody>
+</table>
+<h2 id="annexes">14. Annexes</h2>
+<h3 id="structure-du-dépôt">14.1 Structure du dépôt</h3>
+<pre><code>kojin/
+├── README.md               — documentation générale du projet
+├── DEPLOYMENT.md            — déploiement AWS (ECS Fargate ARM64 + S3 + EFS + ALB)
+├── requirements.txt         — dépendances Python
+├── Dockerfile               — image applicative (torch CPU-only, reciperl/ inclus)
+├── streamlit_app.py         — point d&#39;entrée, navigation
+├── kojin_common.py          — CSS, constantes, solveur, factory LLM
+├── app_pages/                — Profil, Bento Planner, Exploration, RL Planner
+├── reciperl/                 — NCF, PPO, environnement RL, chargement Food.com
+├── data_prep_nutriments.py  — pipeline Open Food Facts → CSV
+└── data/                     — non versionné : food.parquet, CSV préparé, kojin.db, reciperl.pt</code></pre>
+<h3 id="sources-et-crédits">14.2 Sources et crédits</h3>
+<ul>
+<li>Open Food Facts — base de données produits, licence ODbL</li>
+<li>Food.com Recipes and Reviews (Kaggle) — entraînement du RL
+Planner</li>
+<li>Hugging Face Hub — hébergement du dataset
+<code>openfoodfacts/product-database</code></li>
+<li>Amazon Web Services — Bedrock, ECS Fargate, EFS, S3, CloudWatch,
+IAM</li>
+<li>Liu et al., <em>“An Interactive Food Recommendation System Using
+Reinforcement Learning”</em>, 2024 — architecture du RL Planner</li>
+</ul>
+<h3 id="accès-à-lapplication-déployée">14.3 Accès à l’application
+déployée</h3>
+<p><strong>http://kojin-alb-1461380392.us-east-1.elb.amazonaws.com</strong></p>
+<p>Accessible publiquement depuis n’importe quel navigateur, sans
+installation ni configuration préalable.</p>
+<h2 id="conclusion">15. Conclusion</h2>
+<p>Le projet Kōjin a permis à l’équipe de mettre en œuvre, sur un cas
+d’usage concret, l’ensemble de la chaîne data-produit vue durant l’année
+: ingestion et nettoyage d’un jeu de données volumineux, modélisation
+mathématique d’un problème d’optimisation sous contraintes,
+apprentissage par renforcement sur des données réelles, intégration d’un
+modèle de langage cloud, et déploiement d’une application conteneurisée
+et sécurisée sur AWS jusqu’à son exposition publique. Les objectifs
+fixés en début de projet — un outil qui compose automatiquement des
+repas équilibrés, avec une alternative de planification interactive par
+renforcement — ont été atteints : l’application est aujourd’hui déployée
+et accessible à l’adresse
+<strong>http://kojin-alb-1461380392.us-east-1.elb.amazonaws.com</strong>,
+et l’ensemble des cas de test fonctionnels a été validé (§10.1).</p>
+<p>Le déploiement réel a également été l’occasion de résoudre trois
+incidents techniques non anticipés (image Docker surdimensionnée,
+incompatibilité d’architecture ARM64/amd64, restriction administrative
+sur un modèle Bedrock tiers), documentés en §8.11 : au-delà de la note,
+cette capacité à diagnostiquer et corriger des problèmes
+d’infrastructure réels en conditions de déploiement constitue une
+compétence directement transférable en environnement professionnel.</p>
+</body>
+</html>

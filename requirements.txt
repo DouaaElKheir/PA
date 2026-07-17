@@ -1,0 +1,22 @@
+# Core UI
+streamlit>=1.36          # required for st.navigation / st.Page (modern multipage API)
+
+# Data & numerics
+polars>=1.0
+numpy>=1.26
+scipy>=1.13
+matplotlib>=3.8          # bento macro pie charts
+
+# Data sources
+huggingface_hub>=0.24    # Open Food Facts dataset download (data_prep_nutriments.py)
+boto3>=1.35              # S3 hydration + Amazon Bedrock runtime client
+
+# Exploration page (LangChain → Bedrock → DuckDB)
+duckdb>=1.0              # in-process SQL engine, executes LLM-generated queries read-only
+langchain-core>=0.3      # ChatPromptTemplate, StrOutputParser
+langchain-aws>=0.2       # ChatBedrockConverse wrapper around amazon.nova-micro-v1:0
+langchain-anthropic>=0.3 # ChatAnthropic wrapper (auto-selected when ANTHROPIC_API_KEY is set)
+langchain-openai>=0.2    # optional: OpenAI-compat server (Ollama/vLLM/fine-tuned compare agent)
+
+# RecipeRL — RL-based interactive food recommender
+torch>=2.2               # required for reciperl.train and rl_planner page
